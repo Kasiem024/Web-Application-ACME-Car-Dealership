@@ -8,6 +8,27 @@
     <script src="js/app.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <title>Web Application ACME Car Dealership</title>
+    <script>
+        getId = () => {
+
+            const url = location.href;
+
+            const urlId = url.substring(27);
+
+            document.getElementById("showId").innerHTML = urlId;
+
+            const cars = ('/Web-Application-ACME-Car-Dealership/public/data/cars.json');
+
+            const carData = cars.find(({
+                id
+            }) => id === urlId);
+
+            alert(carData);
+
+            document.getElementById("showData").innerHTML = carData;
+
+        }
+    </script>
 </head>
 
 <!-- 
@@ -17,16 +38,16 @@
     sen skriva ut med på samma sät som den förra uppgiften
  -->
 
-<body>
+<body onload="getId()">
     <h1>This is a list of all the cars in storage</h1>
 
     <div id="showCarsList"></div>
 
-    <script>
-        function getURL() {
-            console.log("The URL of this page is: " + window.location.href);
-        }
-    </script>
+
+
+    <p id="showId"></p>
+    <p id="showData"></p>
+
 
 </body>
 
