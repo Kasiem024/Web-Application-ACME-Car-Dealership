@@ -2,14 +2,14 @@
 
 const express = require('express');
 const app = express();
-const port = 8080;
-const indexRouter = require('./routes/indexRoute');
-const carsRouter = require('./routes/carsRoute');
+const port = 8042;
+const indexRouter = require('./routes/index');
+const carsRouter = require('./routes/cars');
 
 app.use(express.static('public'));
 
+app.use('/', indexRouter);
 app.use('/cars', carsRouter);
-app.use('/', carsRouter);
 
 app.listen(port);
 
