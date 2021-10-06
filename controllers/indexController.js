@@ -1,4 +1,5 @@
-exports.index = (req, res) => {
+'use strict'
 
-    res.send('<h1>Välkommen till ACME Cars Dealership!</h1>');
+exports.index = (req, res) => {
+    res.send('<h1>Welcome to ACME Cars Dealership!</h1>');
 };

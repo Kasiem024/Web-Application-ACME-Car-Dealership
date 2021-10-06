@@ -1,4 +1,6 @@
-console.log('app is running');
+'use strict'
+
+console.log('app.js is running');
 
 let dataURL = '../data/cars.json';
 let req = new XMLHttpRequest();
@@ -7,13 +9,13 @@ req.open('GET', dataURL);
 req.responseType = 'json';
 req.send();
 
-console.log('data received');
+console.log('Data received!');
 
 req.onload = () => {
     const data = req.response;
     console.log(data);
 
-    const cars = data['carsList'];
+    const cars = data['cars'];
 
     const myList = document.createElement('ul');
 
@@ -24,5 +26,5 @@ req.onload = () => {
         myList.appendChild(listItem);
     };
 
-    document.getElementById('cars').appendChild(myList);
+    document.getElementById('showCarsList').appendChild(myList);
 };

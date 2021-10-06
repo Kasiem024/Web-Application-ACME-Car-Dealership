@@ -1,9 +1,5 @@
-exports.index = (req, res) => {
+'use strict'
 
-    res.sendfile('public/cars.html');
-
-};
-
-exports.id = (req, res) => {
+exports.carList = (req, res) => {
     res.sendfile('public/cars.html');
 };

@@ -1,15 +1,24 @@
 {
-  "name": "waacd",
+  "name": "web-application-acme-car-dealership",
   "version": "1.0.0",
-  "description": "",
+  "description": "Web Application for managing cars in a list",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "",
+  "author": "Kasiem",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kasiem024/Web-Application-ACME-Car-Dealership.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Kasiem024/Web-Application-ACME-Car-Dealership/issues"
+  },
+  "homepage": "https://github.com/Kasiem024/Web-Application-ACME-Car-Dealership#readme"
 }
