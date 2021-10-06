@@ -13,14 +13,14 @@ req.onload = () => {
     const data = req.response;
     console.log(data);
 
-    const cars = data['cars'];
+    const cars = data['carsList'];
 
     const myList = document.createElement('ul');
 
     for (let i = 0; i < cars.length; i++) {
         console.log(i);
         const listItem = document.createElement('li');
-        listItem.textContent = cars[i].make;
+        listItem.textContent = "Make: " + cars[i].Make + " Model: " + cars[i].Model + " Year: " + cars[i].Year;
         myList.appendChild(listItem);
     };
 
